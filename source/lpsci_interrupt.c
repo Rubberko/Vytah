@@ -102,6 +102,7 @@ bool doorClosed;
 bool isMoving;
 bool dirUp;
 bool dirDown;
+bool lastDirDown;
 bool slowSpeed;
 bool floor_0;
 bool floor_1;
@@ -466,6 +467,10 @@ void stopMotor(void) {
 	uint8_t msg[] = { 0xa0, 0xf1, 0x00, 0x01, 0x01, 0x78 };
 	LPSCI_WriteBlocking(DEMO_LPSCI, msg, sizeof(msg));
 	isMoving = false;
+	if (dirDown)
+		lastDirDown = true;
+	else
+		lastDirDown = false;
 	dirDown = false;
 	dirUp = false;
 	displayData();
@@ -559,7 +564,7 @@ int main(void) {
 
 	LPSCI_EnableInterrupts(DEMO_LPSCI, kLPSCI_RxDataRegFullInterruptEnable);
 	EnableIRQ(DEMO_LPSCI_IRQn);
-
+	lastDirDown = true;
 	readyForNewData();
 	isMoving = false;
 	ready = false;
@@ -575,8 +580,12 @@ int main(void) {
 			delay(5);
 			readyForNewData();
 		}
-		//if (floor_0 || floor_1 || floor_2 || floor_3 || floor_4) {
-			//if()
-		//}
+		/*if ((floor_0 || floor_1 || floor_2 || floor_3 || floor_4) && (isMoving == false)) {
+			if (lastDirDown)
+				goDown();
+			else
+				goUp();
+		}
+		*/
 	}
 }
