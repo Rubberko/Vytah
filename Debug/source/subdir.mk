@@ -4,17 +4,29 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../source/crc.c \
+../source/dataHandling.c \
+../source/ledInfo.c \
 ../source/lpsci_interrupt.c \
+../source/movement.c \
 ../source/mtb.c \
 ../source/semihost_hardfault.c 
 
 OBJS += \
+./source/crc.o \
+./source/dataHandling.o \
+./source/ledInfo.o \
 ./source/lpsci_interrupt.o \
+./source/movement.o \
 ./source/mtb.o \
 ./source/semihost_hardfault.o 
 
 C_DEPS += \
+./source/crc.d \
+./source/dataHandling.d \
+./source/ledInfo.d \
 ./source/lpsci_interrupt.d \
+./source/movement.d \
 ./source/mtb.d \
 ./source/semihost_hardfault.d 
 

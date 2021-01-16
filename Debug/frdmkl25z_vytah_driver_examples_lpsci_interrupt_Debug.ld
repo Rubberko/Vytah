@@ -6,7 +6,7 @@
  * Generated linker script file for MKL25Z128xxx4
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v11.0.1 [Build 2563] [2019-09-01] on 4.1.2021 19:08:36
+ * MCUXpresso IDE v11.0.1 [Build 2563] [2019-09-01] on 16.1.2021 15:03:35
  */
 
 INCLUDE "frdmkl25z_vytah_driver_examples_lpsci_interrupt_Debug_library.ld"

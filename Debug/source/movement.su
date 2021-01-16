@@ -1,0 +1,8 @@
+movement.c:12:6:goUp	24	static
+movement.c:27:6:goSlowUp	24	static
+movement.c:34:6:goSlowDown	24	static
+movement.c:41:6:closeDoor	16	static
+movement.c:46:6:openDoor	16	static
+movement.c:51:6:stopMotor	16	static
+movement.c:64:6:goDown	24	static
+movement.c:73:6:goToDefault	8	static
