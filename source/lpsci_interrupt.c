@@ -1,3 +1,9 @@
+/**
+ * @file    lpsci_interrupt.c
+ * @brief   Hlavny spustaci subor
+ * @details Subor obsahuje funkciu hlavnu funkciu main a spravcu preruseni
+ */
+
 #include "board.h"
 
 #include <vars.h>
@@ -9,12 +15,6 @@
  * Definitions
  ******************************************************************************/
 
-
-/*! @brief Ring buffer size (Unit: Byte). */
-//#define DEMO_RING_BUFFER_SIZE 16
-
-
-/*! @brief Ring buffer to save received data. */
 
 /*******************************************************************************
  * Prototypes
@@ -65,13 +65,10 @@ int main(void) {
 
 	LPSCI_EnableInterrupts(DEMO_LPSCI, kLPSCI_RxDataRegFullInterruptEnable);
 	EnableIRQ(DEMO_LPSCI_IRQn);
-	lastDirDown = true;
-	readyForNewData();
-	isMoving = false;
-	ready = false;
-	goToDefault();
-	while (1) {
 
+	goToDefault();
+
+	while (1) {
 		if (dataReady) {
 			if (data[0] == 0xa0) {
 				dataProcessing(data[2]);
@@ -81,12 +78,8 @@ int main(void) {
 			delay(5);
 			readyForNewData();
 		}
-		/*if ((floor_0 || floor_1 || floor_2 || floor_3 || floor_4) && (isMoving == false)) {
-			if (lastDirDown)
-				goDown();
-			else
-				goUp();
+		if (!isMoving) {
+			unservedFloors();
 		}
-		*/
 	}
 }

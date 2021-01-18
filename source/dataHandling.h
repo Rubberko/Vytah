@@ -21,5 +21,6 @@ void goToFloor(uint8_t floor);
 void processAck(uint8_t device);
 void delay(int millis);
 void readyForNewData(void);
+void unservedFloors(void);
 
 #endif /* DATAHANDLING_H_ */

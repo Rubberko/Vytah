@@ -4,3 +4,4 @@ dataHandling.c:220:6:goToFloor	16	static
 dataHandling.c:246:6:processAck	16	static
 dataHandling.c:268:6:delay	24	static
 dataHandling.c:273:6:readyForNewData	8	static
+dataHandling.c:279:6:unservedFloors	8	static

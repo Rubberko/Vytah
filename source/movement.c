@@ -5,9 +5,7 @@
  *      Author: jsmol
  */
 
-
 #include <movement.h>
-
 
 void goUp(void) {
 	//if (doorClosed) {
@@ -17,11 +15,6 @@ void goUp(void) {
 	uint8_t msg[] =
 			{ 0xa0, 0xf1, 0x00, 0x05, 0x02, 0x64, 0x00, 0x00, 0x00, 0x64 };
 	LPSCI_WriteBlocking(DEMO_LPSCI, msg, sizeof(msg));
-	//} else {
-	//	closeDoor();
-	//	delay(150);
-	//	goUp();
-	//}
 }
 
 void goSlowUp(void) {
@@ -71,6 +64,10 @@ void goDown(void) {
 }
 
 void goToDefault(void) {
+	lastDirDown = true;
+	readyForNewData();
+	isMoving = false;
+	ready = false;
 	closeDoor();
 	delay(5);
 	floor_0 = true;

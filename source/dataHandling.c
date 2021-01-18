@@ -17,16 +17,7 @@ void dataProcessing(uint8_t device) {
 			prevLimSwitch = actLimSwitch;
 			actLimSwitch = LIMIT_SWITCH_0;
 		}
-		/*
-		 if (actLimSwitch == 0) {
-		 actLimSwitch = LIMIT_SWITCH_0;
-		 } else {
-		 prevLimSwitch = actLimSwitch;
-		 actLimSwitch = LIMIT_SWITCH_0;
-		 }
-		 */
 		if (floor_0 && data[4] == 0x01) {
-			//goSlowDown();
 			delay(20);
 			stopMotor();
 			floor_0 = false;
@@ -99,9 +90,9 @@ void dataProcessing(uint8_t device) {
 	case BUTTON_0:
 		closeDoor();
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_0) {
+		if (actLimSwitch > LIMIT_SWITCH_0 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		ledControl(0x10, true);
@@ -111,9 +102,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x11, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_1) {
+		if (actLimSwitch > LIMIT_SWITCH_1 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(1);
@@ -122,9 +113,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x12, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_2) {
+		if (actLimSwitch > LIMIT_SWITCH_2 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(2);
@@ -133,9 +124,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x13, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_3) {
+		if (actLimSwitch > LIMIT_SWITCH_3 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(3);
@@ -144,9 +135,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x14, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_4) {
+		if (actLimSwitch > LIMIT_SWITCH_4 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(4);
@@ -155,9 +146,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x20, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_0) {
+		if (actLimSwitch > LIMIT_SWITCH_0 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(0);
@@ -166,9 +157,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x21, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_1) {
+		if (actLimSwitch > LIMIT_SWITCH_1 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(1);
@@ -177,9 +168,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x22, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_2) {
+		if (actLimSwitch > LIMIT_SWITCH_2 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(2);
@@ -188,9 +179,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x23, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_3) {
+		if (actLimSwitch > LIMIT_SWITCH_3 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(3);
@@ -199,9 +190,9 @@ void dataProcessing(uint8_t device) {
 		closeDoor();
 		ledControl(0x24, true);
 		delay(200);
-		if (actLimSwitch > LIMIT_SWITCH_4) {
+		if (actLimSwitch > LIMIT_SWITCH_4 && !isMoving) {
 			goDown();
-		} else {
+		} else if (!isMoving) {
 			goUp();
 		}
 		goToFloor(4);
@@ -274,4 +265,57 @@ void readyForNewData(void) {
 	dataReady = false;
 	dataIndex = 0;
 	recvDataSize = 0;
+}
+
+void unservedFloors(void) {
+	if (floor_0) {
+		delay(200);
+		closeDoor();
+		delay(200);
+		if (actLimSwitch > LIMIT_SWITCH_0 && !isMoving) {
+			goDown();
+		} else if (!isMoving) {
+			goUp();
+		}
+	}
+	if (floor_1) {
+		delay(200);
+		closeDoor();
+		delay(200);
+		if (actLimSwitch > LIMIT_SWITCH_1 && !isMoving) {
+			goDown();
+		} else if (!isMoving) {
+			goUp();
+		}
+	}
+	if (floor_2) {
+		delay(200);
+		closeDoor();
+		delay(200);
+		if (actLimSwitch > LIMIT_SWITCH_2 && !isMoving) {
+			goDown();
+		} else if (!isMoving) {
+			goUp();
+		}
+	}
+	if (floor_3) {
+		delay(200);
+		closeDoor();
+		delay(200);
+		if (actLimSwitch > LIMIT_SWITCH_3 && !isMoving) {
+			goDown();
+		} else if (!isMoving) {
+			goUp();
+		}
+	}
+	if (floor_4) {
+		delay(200);
+		closeDoor();
+		delay(200);
+		if (actLimSwitch > LIMIT_SWITCH_4 && !isMoving) {
+			goDown();
+		} else if (!isMoving) {
+			goUp();
+		}
+	}
 }

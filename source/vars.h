@@ -8,8 +8,6 @@
 #ifndef VARS_H_
 #define VARS_H_
 
-volatile uint16_t txIndex; /* Index of the data to send out. */
-volatile uint16_t rxIndex; /* Index of the memory to save new arrived data. */
 volatile uint8_t data[256];
 volatile uint8_t dataIndex;
 volatile uint8_t recvDataSize;

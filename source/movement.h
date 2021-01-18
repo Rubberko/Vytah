@@ -11,7 +11,7 @@
 
 #include <definitions.h>
 
-extern bool dirUp, isMoving, dirDown, lastDirDown, floor_0;
+extern bool dirUp, isMoving, dirDown, lastDirDown, floor_0, ready;
 
 void goUp(void);
 void goSlowUp(void);
