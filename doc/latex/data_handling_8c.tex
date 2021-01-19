@@ -1,0 +1,90 @@
+\hypertarget{data_handling_8c}{}\doxysection{data\+Handling.\+c File Reference}
+\label{data_handling_8c}\index{dataHandling.c@{dataHandling.c}}
+
+
+Funkcie na spracovanie dat a riadenie pohybov vytahu.  
+
+
+{\ttfamily \#include $<$data\+Handling.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data_handling_8c_a1b122f2997ae99c05fb18e1953b9fc88}{data\+Processing}} (uint8\+\_\+t device)
+\item 
+void \mbox{\hyperlink{data_handling_8c_ad591a9ea25310efb34a497ea0b00e7ed}{send\+Ack}} (uint8\+\_\+t device)
+\item 
+void \mbox{\hyperlink{data_handling_8c_a287a4b14fd6c6f11d343153d11eeafd3}{go\+To\+Floor}} (uint8\+\_\+t floor)
+\item 
+void \mbox{\hyperlink{data_handling_8c_a31f852c90bdd191df63a86a69726ca44}{process\+Ack}} (uint8\+\_\+t device)
+\item 
+void \mbox{\hyperlink{data_handling_8c_ac0fed4fb18bece58c851f7d76f8ebe38}{delay}} (int millis)
+\item 
+void \mbox{\hyperlink{data_handling_8c_a04c7c9713aacf9ff2d896307ae2eccff}{ready\+For\+New\+Data}} (void)
+\item 
+void \mbox{\hyperlink{data_handling_8c_a121ba52007e3876d787638818a2188c2}{unserved\+Floors}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcie na spracovanie dat a riadenie pohybov vytahu. 
+
+Funkcie na spracovanie prijatych dat, riadenie smeru pohybu vytahu, obsluha tlacidiel, odosielanie A\+CK 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{data_handling_8c_a1b122f2997ae99c05fb18e1953b9fc88}\label{data_handling_8c_a1b122f2997ae99c05fb18e1953b9fc88}} 
+\index{dataHandling.c@{dataHandling.c}!dataProcessing@{dataProcessing}}
+\index{dataProcessing@{dataProcessing}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{dataProcessing()}{dataProcessing()}}
+{\footnotesize\ttfamily void data\+Processing (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})}
+
+Funkcia spracuva prijate data, podla toho ktory prvok spravu poslal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Adresa prvku, ktory poslal spravu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{data_handling_8c_ac0fed4fb18bece58c851f7d76f8ebe38}\label{data_handling_8c_ac0fed4fb18bece58c851f7d76f8ebe38}} 
+\index{dataHandling.c@{dataHandling.c}!delay@{delay}}
+\index{delay@{delay}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{millis }\end{DoxyParamCaption})}
+
+Funkcia caka zadany pocet milisekund \mbox{\Hypertarget{data_handling_8c_a287a4b14fd6c6f11d343153d11eeafd3}\label{data_handling_8c_a287a4b14fd6c6f11d343153d11eeafd3}} 
+\index{dataHandling.c@{dataHandling.c}!goToFloor@{goToFloor}}
+\index{goToFloor@{goToFloor}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{goToFloor()}{goToFloor()}}
+{\footnotesize\ttfamily void go\+To\+Floor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{floor }\end{DoxyParamCaption})}
+
+Funkcia nastavuje flag na ktore poschodie sa ma vytah presunut \mbox{\Hypertarget{data_handling_8c_a31f852c90bdd191df63a86a69726ca44}\label{data_handling_8c_a31f852c90bdd191df63a86a69726ca44}} 
+\index{dataHandling.c@{dataHandling.c}!processAck@{processAck}}
+\index{processAck@{processAck}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{processAck()}{processAck()}}
+{\footnotesize\ttfamily void process\+Ack (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})}
+
+Funkcia spracuva A\+CK \mbox{\Hypertarget{data_handling_8c_a04c7c9713aacf9ff2d896307ae2eccff}\label{data_handling_8c_a04c7c9713aacf9ff2d896307ae2eccff}} 
+\index{dataHandling.c@{dataHandling.c}!readyForNewData@{readyForNewData}}
+\index{readyForNewData@{readyForNewData}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{readyForNewData()}{readyForNewData()}}
+{\footnotesize\ttfamily void ready\+For\+New\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia nastavi premenne na prijatie novej spravy \mbox{\Hypertarget{data_handling_8c_ad591a9ea25310efb34a497ea0b00e7ed}\label{data_handling_8c_ad591a9ea25310efb34a497ea0b00e7ed}} 
+\index{dataHandling.c@{dataHandling.c}!sendAck@{sendAck}}
+\index{sendAck@{sendAck}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{sendAck()}{sendAck()}}
+{\footnotesize\ttfamily void send\+Ack (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})}
+
+Funkcia posiela A\+CK
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Prvok ktoremu sa odosiela \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{data_handling_8c_a121ba52007e3876d787638818a2188c2}\label{data_handling_8c_a121ba52007e3876d787638818a2188c2}} 
+\index{dataHandling.c@{dataHandling.c}!unservedFloors@{unservedFloors}}
+\index{unservedFloors@{unservedFloors}!dataHandling.c@{dataHandling.c}}
+\doxysubsubsection{\texorpdfstring{unservedFloors()}{unservedFloors()}}
+{\footnotesize\ttfamily void unserved\+Floors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zistuje ci je niektore poschodie neobsluzene, potom posle vytah 

@@ -1,0 +1,68 @@
+\hypertarget{movement_8c}{}\doxysection{movement.\+c File Reference}
+\label{movement_8c}\index{movement.c@{movement.c}}
+
+
+Funkcie na riadenie pohybu vytahu.  
+
+
+{\ttfamily \#include $<$movement.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{movement_8c_aab2277da2901eb49cc42fb9172275e0a}{go\+Up}} (void)
+\item 
+void \mbox{\hyperlink{movement_8c_a122d1b279c8cbf6de8190f204cf94f7d}{go\+Down}} (void)
+\item 
+void \mbox{\hyperlink{movement_8c_a7aebac9f4cf158f4f443d4c168ec3461}{stop\+Motor}} (void)
+\item 
+void \mbox{\hyperlink{movement_8c_ab0a50219d4aeba12448075769aca562a}{close\+Door}} (void)
+\item 
+void \mbox{\hyperlink{movement_8c_a0733525b77710d1c965898c384c1da68}{open\+Door}} (void)
+\item 
+void \mbox{\hyperlink{movement_8c_ae32f2f0d6bf77be6e9c5bf08638a3929}{go\+To\+Default}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcie na riadenie pohybu vytahu. 
+
+Funkcie na riadenie pohybov dveri a motora. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{movement_8c_ab0a50219d4aeba12448075769aca562a}\label{movement_8c_ab0a50219d4aeba12448075769aca562a}} 
+\index{movement.c@{movement.c}!closeDoor@{closeDoor}}
+\index{closeDoor@{closeDoor}!movement.c@{movement.c}}
+\doxysubsubsection{\texorpdfstring{closeDoor()}{closeDoor()}}
+{\footnotesize\ttfamily void close\+Door (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zatvori dvere vytahu \mbox{\Hypertarget{movement_8c_a122d1b279c8cbf6de8190f204cf94f7d}\label{movement_8c_a122d1b279c8cbf6de8190f204cf94f7d}} 
+\index{movement.c@{movement.c}!goDown@{goDown}}
+\index{goDown@{goDown}!movement.c@{movement.c}}
+\doxysubsubsection{\texorpdfstring{goDown()}{goDown()}}
+{\footnotesize\ttfamily void go\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia posle vytah smerom dolu, nastavi flagy potrebne pre dalsie funkcie \mbox{\Hypertarget{movement_8c_ae32f2f0d6bf77be6e9c5bf08638a3929}\label{movement_8c_ae32f2f0d6bf77be6e9c5bf08638a3929}} 
+\index{movement.c@{movement.c}!goToDefault@{goToDefault}}
+\index{goToDefault@{goToDefault}!movement.c@{movement.c}}
+\doxysubsubsection{\texorpdfstring{goToDefault()}{goToDefault()}}
+{\footnotesize\ttfamily void go\+To\+Default (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia inicializuje vytah na prizemie a nastavi potrebne premenne \mbox{\Hypertarget{movement_8c_aab2277da2901eb49cc42fb9172275e0a}\label{movement_8c_aab2277da2901eb49cc42fb9172275e0a}} 
+\index{movement.c@{movement.c}!goUp@{goUp}}
+\index{goUp@{goUp}!movement.c@{movement.c}}
+\doxysubsubsection{\texorpdfstring{goUp()}{goUp()}}
+{\footnotesize\ttfamily void go\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia posle vytah smerom hore, nastavi flagy potrebne pre dalsie funkcie \mbox{\Hypertarget{movement_8c_a0733525b77710d1c965898c384c1da68}\label{movement_8c_a0733525b77710d1c965898c384c1da68}} 
+\index{movement.c@{movement.c}!openDoor@{openDoor}}
+\index{openDoor@{openDoor}!movement.c@{movement.c}}
+\doxysubsubsection{\texorpdfstring{openDoor()}{openDoor()}}
+{\footnotesize\ttfamily void open\+Door (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia otvori dvere vytahu \mbox{\Hypertarget{movement_8c_a7aebac9f4cf158f4f443d4c168ec3461}\label{movement_8c_a7aebac9f4cf158f4f443d4c168ec3461}} 
+\index{movement.c@{movement.c}!stopMotor@{stopMotor}}
+\index{stopMotor@{stopMotor}!movement.c@{movement.c}}
+\doxysubsubsection{\texorpdfstring{stopMotor()}{stopMotor()}}
+{\footnotesize\ttfamily void stop\+Motor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zastavi motor vytahu, nastavi flagy potrebne pre dalsie funkcie 

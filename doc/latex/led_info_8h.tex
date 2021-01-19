@@ -1,0 +1,58 @@
+\hypertarget{led_info_8h}{}\doxysection{led\+Info.\+h File Reference}
+\label{led_info_8h}\index{ledInfo.h@{ledInfo.h}}
+
+
+Hlavicky funkcii suboru \mbox{\hyperlink{led_info_8c}{led\+Info.\+c}}.  
+
+
+{\ttfamily \#include $<$definitions.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_info_8h_a66239e4e981405580158b7b60f21fd1d}{display\+Data}} (void)
+\item 
+void \mbox{\hyperlink{led_info_8h_aec20cbfae0bc1af60e148c3cd86926b6}{led\+Control}} (uint8\+\_\+t led\+Id, bool state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{led_info_8h_ab6f37f20dadcfe9e82e90601121686ef}{dir\+Down}}
+\item 
+\mbox{\Hypertarget{led_info_8h_a0f5730d0f66872e32aedcddeea859724}\label{led_info_8h_a0f5730d0f66872e32aedcddeea859724}} 
+bool {\bfseries dir\+Up}
+\item 
+\mbox{\Hypertarget{led_info_8h_ad9e8135e147bf1016092029ba633aeba}\label{led_info_8h_ad9e8135e147bf1016092029ba633aeba}} 
+uint8\+\_\+t {\bfseries act\+Lim\+Switch}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hlavicky funkcii suboru \mbox{\hyperlink{led_info_8c}{led\+Info.\+c}}. 
+
+Hlavicky funkcii, deklaracie premennych urcujucich smer jazdy kabiny a aktualny limit switch 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_info_8h_a66239e4e981405580158b7b60f21fd1d}\label{led_info_8h_a66239e4e981405580158b7b60f21fd1d}} 
+\index{ledInfo.h@{ledInfo.h}!displayData@{displayData}}
+\index{displayData@{displayData}!ledInfo.h@{ledInfo.h}}
+\doxysubsubsection{\texorpdfstring{displayData()}{displayData()}}
+{\footnotesize\ttfamily void display\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia zobrazuje na displej smer jazdy kabiny vytahu, tiez zobrazuje aktualne poschodia na ktorom sa kabina nachadza. \mbox{\Hypertarget{led_info_8h_aec20cbfae0bc1af60e148c3cd86926b6}\label{led_info_8h_aec20cbfae0bc1af60e148c3cd86926b6}} 
+\index{ledInfo.h@{ledInfo.h}!ledControl@{ledControl}}
+\index{ledControl@{ledControl}!ledInfo.h@{ledInfo.h}}
+\doxysubsubsection{\texorpdfstring{ledControl()}{ledControl()}}
+{\footnotesize\ttfamily void led\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led\+Id,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+Funkcia zasvecuje a zhasina led 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{led_info_8h_ab6f37f20dadcfe9e82e90601121686ef}\label{led_info_8h_ab6f37f20dadcfe9e82e90601121686ef}} 
+\index{ledInfo.h@{ledInfo.h}!dirDown@{dirDown}}
+\index{dirDown@{dirDown}!ledInfo.h@{ledInfo.h}}
+\doxysubsubsection{\texorpdfstring{dirDown}{dirDown}}
+{\footnotesize\ttfamily bool dir\+Down}
+
+Deklaracie premennych 

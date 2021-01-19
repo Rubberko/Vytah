@@ -1,0 +1,104 @@
+\hypertarget{movement_8h}{}\doxysection{movement.\+h File Reference}
+\label{movement_8h}\index{movement.h@{movement.h}}
+
+
+Hlavicky funkcii suboru \mbox{\hyperlink{movement_8c}{movement.\+c}}.  
+
+
+{\ttfamily \#include $<$definitions.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{movement_8h_aab2277da2901eb49cc42fb9172275e0a}{go\+Up}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_ab0a50219d4aeba12448075769aca562a}{close\+Door}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_a0733525b77710d1c965898c384c1da68}{open\+Door}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_a7aebac9f4cf158f4f443d4c168ec3461}{stop\+Motor}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_a122d1b279c8cbf6de8190f204cf94f7d}{go\+Down}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_ae32f2f0d6bf77be6e9c5bf08638a3929}{go\+To\+Default}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{movement_8h_a0f5730d0f66872e32aedcddeea859724}{dir\+Up}}
+\item 
+\mbox{\Hypertarget{movement_8h_a420415c6b665fb9669a388e0e96ceb02}\label{movement_8h_a420415c6b665fb9669a388e0e96ceb02}} 
+bool {\bfseries is\+Moving}
+\item 
+bool \mbox{\hyperlink{movement_8h_ab6f37f20dadcfe9e82e90601121686ef}{dir\+Down}}
+\item 
+\mbox{\Hypertarget{movement_8h_a5fdfb514933e0d4659102417bc8f6710}\label{movement_8h_a5fdfb514933e0d4659102417bc8f6710}} 
+bool {\bfseries last\+Dir\+Down}
+\item 
+\mbox{\Hypertarget{movement_8h_a9d0b23ebd0f18315bf11eb303b1915fe}\label{movement_8h_a9d0b23ebd0f18315bf11eb303b1915fe}} 
+bool {\bfseries floor\+\_\+0}
+\item 
+\mbox{\Hypertarget{movement_8h_a65cf7d7f8e531611b245355ab91fd749}\label{movement_8h_a65cf7d7f8e531611b245355ab91fd749}} 
+bool {\bfseries ready}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hlavicky funkcii suboru \mbox{\hyperlink{movement_8c}{movement.\+c}}. 
+
+Hlavicky funkcii, deklaracie premennych (flagov) potrebnych pre dalsie funkcie. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{movement_8h_ab0a50219d4aeba12448075769aca562a}\label{movement_8h_ab0a50219d4aeba12448075769aca562a}} 
+\index{movement.h@{movement.h}!closeDoor@{closeDoor}}
+\index{closeDoor@{closeDoor}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{closeDoor()}{closeDoor()}}
+{\footnotesize\ttfamily void close\+Door (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zatvori dvere vytahu \mbox{\Hypertarget{movement_8h_a122d1b279c8cbf6de8190f204cf94f7d}\label{movement_8h_a122d1b279c8cbf6de8190f204cf94f7d}} 
+\index{movement.h@{movement.h}!goDown@{goDown}}
+\index{goDown@{goDown}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{goDown()}{goDown()}}
+{\footnotesize\ttfamily void go\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia posle vytah smerom dolu, nastavi flagy potrebne pre dalsie funkcie \mbox{\Hypertarget{movement_8h_ae32f2f0d6bf77be6e9c5bf08638a3929}\label{movement_8h_ae32f2f0d6bf77be6e9c5bf08638a3929}} 
+\index{movement.h@{movement.h}!goToDefault@{goToDefault}}
+\index{goToDefault@{goToDefault}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{goToDefault()}{goToDefault()}}
+{\footnotesize\ttfamily void go\+To\+Default (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia inicializuje vytah na prizemie a nastavi potrebne premenne \mbox{\Hypertarget{movement_8h_aab2277da2901eb49cc42fb9172275e0a}\label{movement_8h_aab2277da2901eb49cc42fb9172275e0a}} 
+\index{movement.h@{movement.h}!goUp@{goUp}}
+\index{goUp@{goUp}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{goUp()}{goUp()}}
+{\footnotesize\ttfamily void go\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia posle vytah smerom hore, nastavi flagy potrebne pre dalsie funkcie \mbox{\Hypertarget{movement_8h_a0733525b77710d1c965898c384c1da68}\label{movement_8h_a0733525b77710d1c965898c384c1da68}} 
+\index{movement.h@{movement.h}!openDoor@{openDoor}}
+\index{openDoor@{openDoor}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{openDoor()}{openDoor()}}
+{\footnotesize\ttfamily void open\+Door (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia otvori dvere vytahu \mbox{\Hypertarget{movement_8h_a7aebac9f4cf158f4f443d4c168ec3461}\label{movement_8h_a7aebac9f4cf158f4f443d4c168ec3461}} 
+\index{movement.h@{movement.h}!stopMotor@{stopMotor}}
+\index{stopMotor@{stopMotor}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{stopMotor()}{stopMotor()}}
+{\footnotesize\ttfamily void stop\+Motor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zastavi motor vytahu, nastavi flagy potrebne pre dalsie funkcie 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{movement_8h_ab6f37f20dadcfe9e82e90601121686ef}\label{movement_8h_ab6f37f20dadcfe9e82e90601121686ef}} 
+\index{movement.h@{movement.h}!dirDown@{dirDown}}
+\index{dirDown@{dirDown}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{dirDown}{dirDown}}
+{\footnotesize\ttfamily bool dir\+Down}
+
+Deklaracie premennych \mbox{\Hypertarget{movement_8h_a0f5730d0f66872e32aedcddeea859724}\label{movement_8h_a0f5730d0f66872e32aedcddeea859724}} 
+\index{movement.h@{movement.h}!dirUp@{dirUp}}
+\index{dirUp@{dirUp}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{dirUp}{dirUp}}
+{\footnotesize\ttfamily bool dir\+Up}
+
+Deklaracie premennych 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lpsci_5finterrupt_2ec_3',['lpsci_interrupt.c',['../lpsci__interrupt_8c.html',1,'']]]
+  ['crc_2ec_35',['crc.c',['../crc_8c.html',1,'']]],
+  ['crc_2eh_36',['crc.h',['../crc_8h.html',1,'']]]
 ];

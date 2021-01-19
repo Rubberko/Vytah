@@ -5,8 +5,19 @@
  *      Author: jsmol
  */
 
+/**
+ * @file    dataHandling.c
+ * @brief   Funkcie na spracovanie dat a riadenie pohybov vytahu
+ * @details Funkcie na spracovanie prijatych dat, riadenie smeru pohybu vytahu,
+ * 			obsluha tlacidiel, odosielanie ACK
+ */
 #include <dataHandling.h>
 
+/***************************************************************************//**
+ * Funkcia spracuva prijate data, podla toho ktory prvok spravu poslal.
+ *
+ * @param device Adresa prvku, ktory poslal spravu
+ ******************************************************************************/
 void dataProcessing(uint8_t device) {
 	sendAck(data[2]);
 	delay(5);
@@ -201,6 +212,11 @@ void dataProcessing(uint8_t device) {
 
 }
 
+/***************************************************************************//**
+ * Funkcia posiela ACK
+ *
+ * @param device Prvok ktoremu sa odosiela
+ ******************************************************************************/
 void sendAck(uint8_t device) {
 	uint8_t crcElements[] = { device, 0x00 };
 	uint8_t msg[] = { 0xa1, device, 0x00, 0x00, dallas_crc8(crcElements,
@@ -208,6 +224,9 @@ void sendAck(uint8_t device) {
 	LPSCI_WriteBlocking(DEMO_LPSCI, msg, sizeof(msg));
 }
 
+/***************************************************************************//**
+ * Funkcia nastavuje flag na ktore poschodie sa ma vytah presunut
+ ******************************************************************************/
 void goToFloor(uint8_t floor) {
 	displayData();
 	switch (floor) {
@@ -233,7 +252,9 @@ void goToFloor(uint8_t floor) {
 		break;
 	}
 }
-
+/***************************************************************************//**
+ * Funkcia spracuva ACK
+ ******************************************************************************/
 void processAck(uint8_t device) {
 	switch (device) {
 	case DOOR:
@@ -253,20 +274,26 @@ void processAck(uint8_t device) {
 	}
 }
 
-/*
- https://www.geeksforgeeks.org/time-delay-c/
- */
+/***************************************************************************//**
+ * Funkcia caka zadany pocet milisekund
+ ******************************************************************************/
 void delay(int millis) {
 	for (long i = 0; i < millis * 10000; i++)
 		__asm("nop");
 }
 
+/***************************************************************************//**
+ * Funkcia nastavi premenne na prijatie novej spravy
+ ******************************************************************************/
 void readyForNewData(void) {
 	dataReady = false;
 	dataIndex = 0;
 	recvDataSize = 0;
 }
 
+/***************************************************************************//**
+ * Funkcia zistuje ci je niektore poschodie neobsluzene, potom posle vytah
+ ******************************************************************************/
 void unservedFloors(void) {
 	if (floor_0) {
 		delay(200);

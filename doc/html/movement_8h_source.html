@@ -65,33 +65,41 @@ $(function() {
 <div class="title">movement.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="movement_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * movement.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Jan 16, 2021</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: jsmol</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef MOVEMENT_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define MOVEMENT_H_</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;definitions.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> dirUp, isMoving, dirDown, lastDirDown, floor_0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> goUp(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> goSlowUp(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> goSlowDown(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> closeDoor(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> openDoor(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> stopMotor(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> goDown(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> goToDefault(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef MOVEMENT_H_</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define MOVEMENT_H_</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="definitions_8h.html">definitions.h</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="movement_8h.html#a0f5730d0f66872e32aedcddeea859724">dirUp</a>, isMoving, <a class="code" href="movement_8h.html#ab6f37f20dadcfe9e82e90601121686ef">dirDown</a>, lastDirDown, floor_0, ready;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MOVEMENT_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="movement_8h.html#aab2277da2901eb49cc42fb9172275e0a">goUp</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="movement_8h.html#ab0a50219d4aeba12448075769aca562a">closeDoor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="movement_8h.html#a0733525b77710d1c965898c384c1da68">openDoor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="movement_8h.html#a7aebac9f4cf158f4f443d4c168ec3461">stopMotor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="movement_8h.html#a122d1b279c8cbf6de8190f204cf94f7d">goDown</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="movement_8h.html#ae32f2f0d6bf77be6e9c5bf08638a3929">goToDefault</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MOVEMENT_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amovement_8h_html_a0f5730d0f66872e32aedcddeea859724"><div class="ttname"><a href="movement_8h.html#a0f5730d0f66872e32aedcddeea859724">dirUp</a></div><div class="ttdeci">bool dirUp</div><div class="ttdef"><b>Definition:</b> vars.h:30</div></div>
+<div class="ttc" id="amovement_8h_html_ab6f37f20dadcfe9e82e90601121686ef"><div class="ttname"><a href="movement_8h.html#ab6f37f20dadcfe9e82e90601121686ef">dirDown</a></div><div class="ttdeci">bool dirDown</div><div class="ttdef"><b>Definition:</b> vars.h:31</div></div>
+<div class="ttc" id="adefinitions_8h_html"><div class="ttname"><a href="definitions_8h.html">definitions.h</a></div><div class="ttdoc">Definicie adries prvkov vytahu.</div></div>
+<div class="ttc" id="amovement_8h_html_a7aebac9f4cf158f4f443d4c168ec3461"><div class="ttname"><a href="movement_8h.html#a7aebac9f4cf158f4f443d4c168ec3461">stopMotor</a></div><div class="ttdeci">void stopMotor(void)</div><div class="ttdef"><b>Definition:</b> movement.c:41</div></div>
+<div class="ttc" id="amovement_8h_html_a122d1b279c8cbf6de8190f204cf94f7d"><div class="ttname"><a href="movement_8h.html#a122d1b279c8cbf6de8190f204cf94f7d">goDown</a></div><div class="ttdeci">void goDown(void)</div><div class="ttdef"><b>Definition:</b> movement.c:30</div></div>
+<div class="ttc" id="amovement_8h_html_a0733525b77710d1c965898c384c1da68"><div class="ttname"><a href="movement_8h.html#a0733525b77710d1c965898c384c1da68">openDoor</a></div><div class="ttdeci">void openDoor(void)</div><div class="ttdef"><b>Definition:</b> movement.c:65</div></div>
+<div class="ttc" id="amovement_8h_html_aab2277da2901eb49cc42fb9172275e0a"><div class="ttname"><a href="movement_8h.html#aab2277da2901eb49cc42fb9172275e0a">goUp</a></div><div class="ttdeci">void goUp(void)</div><div class="ttdef"><b>Definition:</b> movement.c:19</div></div>
+<div class="ttc" id="amovement_8h_html_ab0a50219d4aeba12448075769aca562a"><div class="ttname"><a href="movement_8h.html#ab0a50219d4aeba12448075769aca562a">closeDoor</a></div><div class="ttdeci">void closeDoor(void)</div><div class="ttdef"><b>Definition:</b> movement.c:57</div></div>
+<div class="ttc" id="amovement_8h_html_ae32f2f0d6bf77be6e9c5bf08638a3929"><div class="ttname"><a href="movement_8h.html#ae32f2f0d6bf77be6e9c5bf08638a3929">goToDefault</a></div><div class="ttdeci">void goToDefault(void)</div><div class="ttdef"><b>Definition:</b> movement.c:73</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

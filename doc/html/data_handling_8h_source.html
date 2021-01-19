@@ -65,32 +65,44 @@ $(function() {
 <div class="title">dataHandling.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="data_handling_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * dataHandling.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Jan 16, 2021</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: jsmol</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef DATAHANDLING_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define DATAHANDLING_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;definitions.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t data[256], dataIndex, recvDataSize;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> dataReady;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> uint8_t actLimSwitch, prevLimSwitch;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> floor_0, floor_1, floor_2, floor_3, floor_4, doorClosed, isMoving;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> dataProcessing(uint8_t device);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> sendAck(uint8_t device);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> goToFloor(uint8_t floor);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> processAck(uint8_t device);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> delay(<span class="keywordtype">int</span> millis);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> readyForNewData(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATAHANDLING_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef DATAHANDLING_H_</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define DATAHANDLING_H_</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="definitions_8h.html">definitions.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code" href="data_handling_8h.html#ab1af1872e4258366ddf29a49988a46c0">data</a>[256], dataIndex, recvDataSize;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> dataReady;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> uint8_t actLimSwitch, prevLimSwitch;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> floor_0, floor_1, floor_2, floor_3, floor_4, doorClosed, isMoving;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#a1b122f2997ae99c05fb18e1953b9fc88">dataProcessing</a>(uint8_t device);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#ad591a9ea25310efb34a497ea0b00e7ed">sendAck</a>(uint8_t device);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#a287a4b14fd6c6f11d343153d11eeafd3">goToFloor</a>(uint8_t floor);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#a31f852c90bdd191df63a86a69726ca44">processAck</a>(uint8_t device);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#ac0fed4fb18bece58c851f7d76f8ebe38">delay</a>(<span class="keywordtype">int</span> millis);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#a04c7c9713aacf9ff2d896307ae2eccff">readyForNewData</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="data_handling_8h.html#a121ba52007e3876d787638818a2188c2">unservedFloors</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATAHANDLING_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="adata_handling_8h_html_a1b122f2997ae99c05fb18e1953b9fc88"><div class="ttname"><a href="data_handling_8h.html#a1b122f2997ae99c05fb18e1953b9fc88">dataProcessing</a></div><div class="ttdeci">void dataProcessing(uint8_t device)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:21</div></div>
+<div class="ttc" id="adata_handling_8h_html_a121ba52007e3876d787638818a2188c2"><div class="ttname"><a href="data_handling_8h.html#a121ba52007e3876d787638818a2188c2">unservedFloors</a></div><div class="ttdeci">void unservedFloors(void)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:297</div></div>
+<div class="ttc" id="adata_handling_8h_html_ab1af1872e4258366ddf29a49988a46c0"><div class="ttname"><a href="data_handling_8h.html#ab1af1872e4258366ddf29a49988a46c0">data</a></div><div class="ttdeci">volatile uint8_t data[256]</div><div class="ttdef"><b>Definition:</b> vars.h:20</div></div>
+<div class="ttc" id="adata_handling_8h_html_a287a4b14fd6c6f11d343153d11eeafd3"><div class="ttname"><a href="data_handling_8h.html#a287a4b14fd6c6f11d343153d11eeafd3">goToFloor</a></div><div class="ttdeci">void goToFloor(uint8_t floor)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:230</div></div>
+<div class="ttc" id="adata_handling_8h_html_a31f852c90bdd191df63a86a69726ca44"><div class="ttname"><a href="data_handling_8h.html#a31f852c90bdd191df63a86a69726ca44">processAck</a></div><div class="ttdeci">void processAck(uint8_t device)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:258</div></div>
+<div class="ttc" id="adata_handling_8h_html_a04c7c9713aacf9ff2d896307ae2eccff"><div class="ttname"><a href="data_handling_8h.html#a04c7c9713aacf9ff2d896307ae2eccff">readyForNewData</a></div><div class="ttdeci">void readyForNewData(void)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:288</div></div>
+<div class="ttc" id="adefinitions_8h_html"><div class="ttname"><a href="definitions_8h.html">definitions.h</a></div><div class="ttdoc">Definicie adries prvkov vytahu.</div></div>
+<div class="ttc" id="adata_handling_8h_html_ac0fed4fb18bece58c851f7d76f8ebe38"><div class="ttname"><a href="data_handling_8h.html#ac0fed4fb18bece58c851f7d76f8ebe38">delay</a></div><div class="ttdeci">void delay(int millis)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:280</div></div>
+<div class="ttc" id="adata_handling_8h_html_ad591a9ea25310efb34a497ea0b00e7ed"><div class="ttname"><a href="data_handling_8h.html#ad591a9ea25310efb34a497ea0b00e7ed">sendAck</a></div><div class="ttdeci">void sendAck(uint8_t device)</div><div class="ttdef"><b>Definition:</b> dataHandling.c:220</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

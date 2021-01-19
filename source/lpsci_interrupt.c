@@ -1,7 +1,7 @@
 /**
  * @file    lpsci_interrupt.c
  * @brief   Hlavny spustaci subor
- * @details Subor obsahuje funkciu hlavnu funkciu main a spravcu preruseni
+ * @details Subor obsahuje funkciu main a funkciu na spravu preruseni
  */
 
 #include "board.h"
@@ -11,25 +11,11 @@
 #include <ledInfo.h>
 #include <crc.h>
 #include <dataHandling.h>
-/*******************************************************************************
- * Definitions
+
+/***************************************************************************//**
+ * Funkcia spravuje prerušenia. Pri vyvolanom preruseni prijme 1 bajt, ktory ulozi do pola.
+ * Ked je sprava cela nastavi flag pre spracovanie spravy.
  ******************************************************************************/
-
-
-/*******************************************************************************
- * Prototypes
- ******************************************************************************/
-
-/*******************************************************************************
- * Variables
- ******************************************************************************/
-
-
-
-/*******************************************************************************
- * Code
- ******************************************************************************/
-
 void DEMO_LPSCI_IRQHandler(void) {
 	if ((kLPSCI_RxDataRegFullFlag) & LPSCI_GetStatusFlags(DEMO_LPSCI)) {
 		data[dataIndex] = LPSCI_ReadByte(DEMO_LPSCI);
@@ -45,10 +31,12 @@ void DEMO_LPSCI_IRQHandler(void) {
 	}
 }
 
-
-/*!
- * @brief Main function
- */
+/***************************************************************************//**
+ * Funkcia main inicializuje komunikaciu.
+ * Posle kabinu vytahu na prizemie.
+ * V nekonecnom cykle kontroluje ci su prijate data pripravene na spracovanie, tiez
+ * kontroluje ci su nejake poschodia v poradi.
+ ******************************************************************************/
 int main(void) {
 	lpsci_config_t config;
 

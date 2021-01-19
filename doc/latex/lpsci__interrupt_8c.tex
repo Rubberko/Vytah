@@ -14,15 +14,28 @@ Hlavny spustaci subor.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{lpsci__interrupt_8c_a1b32411cb5eef5d5447981e6181f229d}\label{lpsci__interrupt_8c_a1b32411cb5eef5d5447981e6181f229d}} 
-void {\bfseries D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+I\+R\+Q\+Handler} (void)
+void \mbox{\hyperlink{lpsci__interrupt_8c_a1b32411cb5eef5d5447981e6181f229d}{D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+I\+R\+Q\+Handler}} (void)
 \item 
-\mbox{\Hypertarget{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
 int \mbox{\hyperlink{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
-\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Hlavny spustaci subor. 
 
-Subor obsahuje funkciu hlavnu funkciu main a spravcu preruseni 
+Subor obsahuje funkciu main a funkciu na spravu preruseni 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lpsci__interrupt_8c_a1b32411cb5eef5d5447981e6181f229d}\label{lpsci__interrupt_8c_a1b32411cb5eef5d5447981e6181f229d}} 
+\index{lpsci\_interrupt.c@{lpsci\_interrupt.c}!DEMO\_LPSCI\_IRQHandler@{DEMO\_LPSCI\_IRQHandler}}
+\index{DEMO\_LPSCI\_IRQHandler@{DEMO\_LPSCI\_IRQHandler}!lpsci\_interrupt.c@{lpsci\_interrupt.c}}
+\doxysubsubsection{\texorpdfstring{DEMO\_LPSCI\_IRQHandler()}{DEMO\_LPSCI\_IRQHandler()}}
+{\footnotesize\ttfamily void D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia spravuje prerušenia. Pri vyvolanom preruseni prijme 1 bajt, ktory ulozi do pola. Ked je sprava cela nastavi flag pre spracovanie spravy. \mbox{\Hypertarget{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{lpsci\_interrupt.c@{lpsci\_interrupt.c}!main@{main}}
+\index{main@{main}!lpsci\_interrupt.c@{lpsci\_interrupt.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia main inicializuje komunikaciu. Posle kabinu vytahu na prizemie. V nekonecnom cykle kontroluje ci su prijate data pripravene na spracovanie, tiez kontroluje ci su nejake poschodia v poradi. 

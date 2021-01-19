@@ -4,8 +4,19 @@
  *  Created on: Jan 16, 2021
  *      Author: jsmol
  */
+
+/**
+ * @file    ledInfo.c
+ * @brief   Funkcie na riadenie led a zobrazenie dat na dispeji
+ * @details Funkcia na riadenie led v kabine vytahu aj na jednotlivych poschodiach,
+ * 			funkcia na zobrazovanie aktualneho poschodia a smeru jazdy na displeji.
+ */
 #include <ledInfo.h>
 
+/***************************************************************************//**
+ * Funkcia zobrazuje na displej smer jazdy kabiny vytahu,
+ * tiez zobrazuje aktualne poschodia na ktorom sa kabina nachadza.
+ ******************************************************************************/
 void displayData(void) {
 	uint8_t tmp;
 	switch (actLimSwitch) {
@@ -44,6 +55,9 @@ void displayData(void) {
 	}
 }
 
+/***************************************************************************//**
+ * Funkcia zasvecuje a zhasina led
+ ******************************************************************************/
 void ledControl(uint8_t ledId, bool state) {
 	if (state) {
 		uint8_t crcElements[] = { ledId, 0x00, 0x01 };

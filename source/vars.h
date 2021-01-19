@@ -5,9 +5,18 @@
  *      Author: jsmol
  */
 
+/**
+ * @file    vars.h
+ * @brief   Deklaracie globalnych premennych
+ * @details Deklaracie globalnych premennych, ktore su vyuzivane
+ * 			pri riadeni vytahu.
+ */
 #ifndef VARS_H_
 #define VARS_H_
 
+/***************************************************************************//**
+ * Deklaracie premennych
+ ******************************************************************************/
 volatile uint8_t data[256];
 volatile uint8_t dataIndex;
 volatile uint8_t recvDataSize;

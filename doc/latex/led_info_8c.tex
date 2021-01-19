@@ -1,0 +1,36 @@
+\hypertarget{led_info_8c}{}\doxysection{led\+Info.\+c File Reference}
+\label{led_info_8c}\index{ledInfo.c@{ledInfo.c}}
+
+
+Funkcie na riadenie led a zobrazenie dat na dispeji.  
+
+
+{\ttfamily \#include $<$led\+Info.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_info_8c_a66239e4e981405580158b7b60f21fd1d}{display\+Data}} (void)
+\item 
+void \mbox{\hyperlink{led_info_8c_aec20cbfae0bc1af60e148c3cd86926b6}{led\+Control}} (uint8\+\_\+t led\+Id, bool state)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcie na riadenie led a zobrazenie dat na dispeji. 
+
+Funkcia na riadenie led v kabine vytahu aj na jednotlivych poschodiach, funkcia na zobrazovanie aktualneho poschodia a smeru jazdy na displeji. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_info_8c_a66239e4e981405580158b7b60f21fd1d}\label{led_info_8c_a66239e4e981405580158b7b60f21fd1d}} 
+\index{ledInfo.c@{ledInfo.c}!displayData@{displayData}}
+\index{displayData@{displayData}!ledInfo.c@{ledInfo.c}}
+\doxysubsubsection{\texorpdfstring{displayData()}{displayData()}}
+{\footnotesize\ttfamily void display\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia zobrazuje na displej smer jazdy kabiny vytahu, tiez zobrazuje aktualne poschodia na ktorom sa kabina nachadza. \mbox{\Hypertarget{led_info_8c_aec20cbfae0bc1af60e148c3cd86926b6}\label{led_info_8c_aec20cbfae0bc1af60e148c3cd86926b6}} 
+\index{ledInfo.c@{ledInfo.c}!ledControl@{ledControl}}
+\index{ledControl@{ledControl}!ledInfo.c@{ledInfo.c}}
+\doxysubsubsection{\texorpdfstring{ledControl()}{ledControl()}}
+{\footnotesize\ttfamily void led\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led\+Id,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+Funkcia zasvecuje a zhasina led 

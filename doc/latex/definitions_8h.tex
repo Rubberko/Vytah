@@ -1,0 +1,100 @@
+\hypertarget{definitions_8h}{}\doxysection{definitions.\+h File Reference}
+\label{definitions_8h}\index{definitions.h@{definitions.h}}
+
+
+Definicie adries prvkov vytahu.  
+
+
+{\ttfamily \#include $<$fsl\+\_\+lpsci.\+h$>$}\newline
+{\ttfamily \#include $<$pin\+\_\+mux.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}clock\+\_\+config.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{definitions_8h_a748e69d615c835d8d9ae5f98af570532}{D\+E\+M\+O\+\_\+\+L\+P\+S\+CI}}~U\+A\+R\+T0
+\item 
+\mbox{\Hypertarget{definitions_8h_a0b3afd1134e408b124f3eda7abae56c4}\label{definitions_8h_a0b3afd1134e408b124f3eda7abae56c4}} 
+\#define {\bfseries D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+C\+L\+K\+S\+RC}~k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk
+\item 
+\mbox{\Hypertarget{definitions_8h_a17ab487c275d39174ea8931961bdbb5d}\label{definitions_8h_a17ab487c275d39174ea8931961bdbb5d}} 
+\#define {\bfseries D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+C\+L\+K\+\_\+\+F\+R\+EQ}~C\+L\+O\+C\+K\+\_\+\+Get\+Freq(k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk)
+\item 
+\mbox{\Hypertarget{definitions_8h_a7055dad0bec420e4f5001d107f53ca5d}\label{definitions_8h_a7055dad0bec420e4f5001d107f53ca5d}} 
+\#define {\bfseries D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+I\+R\+Qn}~U\+A\+R\+T0\+\_\+\+I\+R\+Qn
+\item 
+\mbox{\Hypertarget{definitions_8h_ac756bf9a6d777533e9e1b08c7f0abf29}\label{definitions_8h_ac756bf9a6d777533e9e1b08c7f0abf29}} 
+\#define {\bfseries D\+E\+M\+O\+\_\+\+L\+P\+S\+C\+I\+\_\+\+I\+R\+Q\+Handler}~U\+A\+R\+T0\+\_\+\+I\+R\+Q\+Handler
+\item 
+\#define \mbox{\hyperlink{definitions_8h_a2e2c60c01e1e303a89b0b16842d77cf9}{B\+U\+T\+T\+O\+N\+\_\+0}}~0xc0
+\item 
+\mbox{\Hypertarget{definitions_8h_af58f5adf2c4e479e30f2efaa24e38324}\label{definitions_8h_af58f5adf2c4e479e30f2efaa24e38324}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+1}~0xc1
+\item 
+\mbox{\Hypertarget{definitions_8h_a46acb6114f87027ec8fa196c02ea7d81}\label{definitions_8h_a46acb6114f87027ec8fa196c02ea7d81}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+2}~0xc2
+\item 
+\mbox{\Hypertarget{definitions_8h_aec518359a13ecef01c1f596fea855364}\label{definitions_8h_aec518359a13ecef01c1f596fea855364}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+3}~0xc3
+\item 
+\mbox{\Hypertarget{definitions_8h_a9bbe94022b11df96e0f4e9147822ed79}\label{definitions_8h_a9bbe94022b11df96e0f4e9147822ed79}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+4}~0xc4
+\item 
+\mbox{\Hypertarget{definitions_8h_a986ce2eb7b808443b18f7de6fc29bf6b}\label{definitions_8h_a986ce2eb7b808443b18f7de6fc29bf6b}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+0\+\_\+\+E\+L\+E\+V\+A\+T\+OR}~0xb0
+\item 
+\mbox{\Hypertarget{definitions_8h_a3811d99d073eac8f32767f08f6bcc79b}\label{definitions_8h_a3811d99d073eac8f32767f08f6bcc79b}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+1\+\_\+\+E\+L\+E\+V\+A\+T\+OR}~0xb1
+\item 
+\mbox{\Hypertarget{definitions_8h_a0ab355ecb3b7aaeb6d556bd7169db221}\label{definitions_8h_a0ab355ecb3b7aaeb6d556bd7169db221}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+2\+\_\+\+E\+L\+E\+V\+A\+T\+OR}~0xb2
+\item 
+\mbox{\Hypertarget{definitions_8h_a27def736a4167deb65211d919806f5e2}\label{definitions_8h_a27def736a4167deb65211d919806f5e2}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+3\+\_\+\+E\+L\+E\+V\+A\+T\+OR}~0xb3
+\item 
+\mbox{\Hypertarget{definitions_8h_a76736e9d99a455ba8ad8ca5eb8bd697c}\label{definitions_8h_a76736e9d99a455ba8ad8ca5eb8bd697c}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N\+\_\+4\+\_\+\+E\+L\+E\+V\+A\+T\+OR}~0xb4
+\item 
+\mbox{\Hypertarget{definitions_8h_a49e5698c97ade7da4b4e6bb0ce39f841}\label{definitions_8h_a49e5698c97ade7da4b4e6bb0ce39f841}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+0}~0xe0
+\item 
+\mbox{\Hypertarget{definitions_8h_a24e2e5a469a3c5a85029c154fab9c9d0}\label{definitions_8h_a24e2e5a469a3c5a85029c154fab9c9d0}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+1}~0xe1
+\item 
+\mbox{\Hypertarget{definitions_8h_a45868f40eaa2405f42f01a476aa93976}\label{definitions_8h_a45868f40eaa2405f42f01a476aa93976}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+2}~0xe2
+\item 
+\mbox{\Hypertarget{definitions_8h_a2c395d659f5df19018b1893dd926a30a}\label{definitions_8h_a2c395d659f5df19018b1893dd926a30a}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+3}~0xe3
+\item 
+\mbox{\Hypertarget{definitions_8h_a7d15fd68d1074b73a19ab38266be4dec}\label{definitions_8h_a7d15fd68d1074b73a19ab38266be4dec}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+4}~0xe4
+\item 
+\mbox{\Hypertarget{definitions_8h_aa19093eb0aa5c5af9c27464ae8f0d2de}\label{definitions_8h_aa19093eb0aa5c5af9c27464ae8f0d2de}} 
+\#define {\bfseries D\+O\+OR}~0xf0
+\item 
+\mbox{\Hypertarget{definitions_8h_ae8d3b23b31729f61bc738fbd9a9a24e0}\label{definitions_8h_ae8d3b23b31729f61bc738fbd9a9a24e0}} 
+\#define {\bfseries M\+O\+T\+OR}~0xf1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definicie adries prvkov vytahu. 
+
+Definicie adries prvkoc vytahu, definicie vyuzivane na komunikaciu, ine vyuzivane hlavickove subory. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{definitions_8h_a2e2c60c01e1e303a89b0b16842d77cf9}\label{definitions_8h_a2e2c60c01e1e303a89b0b16842d77cf9}} 
+\index{definitions.h@{definitions.h}!BUTTON\_0@{BUTTON\_0}}
+\index{BUTTON\_0@{BUTTON\_0}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_0}{BUTTON\_0}}
+{\footnotesize\ttfamily \#define B\+U\+T\+T\+O\+N\+\_\+0~0xc0}
+
+Adresy prvkov \mbox{\Hypertarget{definitions_8h_a748e69d615c835d8d9ae5f98af570532}\label{definitions_8h_a748e69d615c835d8d9ae5f98af570532}} 
+\index{definitions.h@{definitions.h}!DEMO\_LPSCI@{DEMO\_LPSCI}}
+\index{DEMO\_LPSCI@{DEMO\_LPSCI}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{DEMO\_LPSCI}{DEMO\_LPSCI}}
+{\footnotesize\ttfamily \#define D\+E\+M\+O\+\_\+\+L\+P\+S\+CI~U\+A\+R\+T0}
+
+Definicie pre komunikaciu 

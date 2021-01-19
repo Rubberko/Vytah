@@ -5,11 +5,21 @@
  *      Author: jsmol
  */
 
+/**
+ * @file    crc.c
+ * @brief   Funkcia na vypocet CRC
+ * @details Funkcia na vypocet CRC
+ */
 #include <crc.h>
 
-/*
- https://stackoverflow.com/questions/29214301/ios-how-to-calculate-crc-8-dallas-maxim-of-nsdata
- */
+/***************************************************************************//**
+ * Funkcia vypocitava CRC
+ * https://stackoverflow.com/questions/29214301/ios-how-to-calculate-crc-8-dallas-maxim-of-nsdata
+ *
+ * @param data Pole z ktoreho ma byt vypocitane CRC
+ * @param size Dlzka dat
+ * @return Vypocitane CRC
+ ******************************************************************************/
 unsigned char dallas_crc8(const unsigned char * data, const unsigned int size) {
 	unsigned char crc = 0;
 	for (unsigned int i = 0; i < size; ++i) {
